@@ -10,7 +10,7 @@ import (
 
 func printUsage() {
 	fmt.Fprintf(os.Stderr, "Usage: %s OPTIONS ACTION ARGS\n", os.Args[0])
-	fmt.Fprintln(os.Stderr, "ACTION: put get")
+	fmt.Fprintln(os.Stderr, "ACTION: put get version")
 	fmt.Fprintln(os.Stderr, "OPTIONS: ")
 	flag.PrintDefaults()
 	os.Exit(1)
@@ -39,6 +39,8 @@ func main() {
 		cmdPut(kv, args[1:])
 	case "get":
 		cmdGet(kv, args[1:])
+	case "version":
+		cmdVersion()
 	default:
 		printUsage()
 	}
