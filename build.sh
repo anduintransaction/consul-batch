@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-RELEASE=0.4
+RELEASE=0.5
 dist=dist
 bin=consul-batch
 
